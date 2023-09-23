@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block body  %}
+
+  {% for audit in audit_ %}
+    <table >   
+      <tr>
+        <th>Commentaire</th>
+      </tr>
+
+      <tr>
+        <td>{{audit.commentaires}}</td>
+      </tr>
+      
+    </table>
+  {% endfor %}
+
+{% endblock %}

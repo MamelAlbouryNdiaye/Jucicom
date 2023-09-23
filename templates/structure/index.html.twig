@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block body  %}
+
+  {% for structure in structures %}
+    <table >   
+      <tr>
+        <th>Mission</th>
+      </tr>
+
+      <tr>
+        <td>{{structure.mission}}</td>
+      </tr>
+      
+    </table>
+  {% endfor %}
+
+{% endblock %}

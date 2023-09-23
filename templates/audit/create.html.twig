@@ -1,0 +1,46 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block title %}Initial{% endblock %}
+
+{% block body %}
+    <h1>Create Etude</h1>
+
+   <form method = "POST">
+      <input type="text" name="Details"   value=""  placeholder="deatail" ><br/>
+      <input type="text" name="Etat"  value="" placeholder="etat"><br/>
+      <input type="text" name="Commentaire"  value="" placeholder="commentaire"><br/>
+      <input type="text" name="solution"  value="" placeholder="solution"><br/>
+      <input type="file" name="Document"  value="" placeholder="document" ><br/>
+      <select name="structure"  id="structure">
+        <option value="">Structure</option>
+            {% for structure in structures %}
+      
+                <option name="structure"  value="{{structure.id}}" > {{structure.mission ?? '-'}}   </option>
+
+            {% endfor %}
+
+            
+      
+       </select>
+       <br/>
+      <input type="submit" name=""  value="send" >
+
+   </form>
+    <!-- Contenido de la página de inicio -->
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
